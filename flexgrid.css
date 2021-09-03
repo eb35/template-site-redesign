@@ -1,0 +1,64 @@
+@import 'reset.css';
+
+.salmon { background: salmon; }
+.chicken { background: yellow; }
+.steak { background: brown; }
+.kebab { background: aquamarine; }
+
+.flex-table {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 50vh;
+}
+.flex-table::before {
+  content: "Flexbox";
+  position: absolute;
+}
+
+.flex-plate {
+  height: 96px;
+  width: 96px;
+}
+
+.salmon {
+  align-self: flex-start;
+}
+.kebab {
+  align-self: flex-end;
+}
+
+
+
+.konafa { background: orange; }
+.icecream { background: brown; }
+.donut { background: burlywood; }
+.cake { background: pink; }
+
+.grid-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  
+  background: antiquewhite;
+  height: 50vh;
+}
+.grid-table::before {
+  content: "Grid";
+  position: absolute;
+}
+
+.grid-plate {
+  height: 96px;
+  width: 96px;
+}
+
+
+.icecream {
+  align-self: start;
+  justify-self: end;
+}
