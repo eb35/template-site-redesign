@@ -1,0 +1,161 @@
+@import 'reset.css';
+
+:root {
+  --bg: white;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-size: 1rem;
+  
+  --line-height-s: 1.25;
+  /* --line-height: 1.5; */
+  --line-height-xl: 2;
+  
+  --content-bg: rgb(253, 253, 224);
+  --content-color: black;
+  --content-accent-1: #005126;
+  --content-accent-1-color: white;
+  --content-accent-2: #dbe5d2;
+}
+
+body {
+  background: var(--bg);
+  color: var(--content-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
+
+a {
+  color: var(--content-color);
+}
+
+.page {
+  background: var(--content-bg);
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+hr.clear {
+  border: 0;
+  margin: 50px;
+}
+
+/* NAV */
+nav.menu {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-areas: "logo links";
+}
+.menu__logo {
+  display: block;
+}
+.menu__list {
+  align-items: center;
+  display: flex;
+  justify-self: end;
+  gap: 1.5em;
+}
+.menu__list a {
+  display: block;
+  padding: 0.75em;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* BUTTON */
+.button {
+  background: var(--content-accent-1);
+  color: var(--content-accent-1-color);
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* MEDIA */
+.media {
+  margin: 0;
+}
+.media img {
+  width: 100%;
+}
+
+/* CONTENT */
+.content {
+  line-height: var(--line-height-xl);
+  padding: 1.5em 3em;
+}
+.content p {
+  margin: 0;
+}
+
+/* ROW */
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 3em;
+  overflow-x: scroll;
+}
+.row .col {
+  min-width: 200px;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3em;
+  margin: 0;
+  padding: 0;
+}
+ul.grid {
+  list-style-type: none;
+}
+
+.item {
+  margin: 0;
+}
+.item img {
+  max-width: 100%;
+}
+
+.card {
+  border: 1px solid var(--content-accent-1);
+  margin: 0 auto;
+  max-width: 300px;
+}
+.card__content {
+  padding: 10px;
+}
+.card__title,
+.card__subtitle {
+  line-height: var(--line-height-s);
+  text-align: right;
+}
+.card__title {
+  color: var(--content-accent-1);
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.card__action {
+  color: var(--content-accent-1);
+  display: block;
+  font-weight: bold;
+  text-align: right;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.card__action::after {
+  background: var(--content-accent-1);
+  color: white;
+  content: "\279C";
+  display: inline-block;
+  font-size: 1.5em;
+  height: 35px;
+  line-height: var(--line-height-s);
+  margin-left: 10px;
+  padding-top: 2px;
+  text-align: center;
+  vertical-align: middle;
+  width: 35px;
+}

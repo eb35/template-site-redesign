@@ -39,10 +39,12 @@
 
 .grid-table {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 150px 150px;
+  grid-template-rows: 150px 150px;
   justify-items: center;
   align-items: center;
+  justify-content: space-between;
+  align-content: space-between;
   
   background: antiquewhite;
   height: 50vh;
