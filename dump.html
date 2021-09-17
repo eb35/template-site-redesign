@@ -13,8 +13,12 @@
   :root {
     --clr-primary: #ee6352;
     --clr-secondary: #d16e8d;
-    --clr-accent: #F7F7FF;
-    --clr-gradient: linear-gradient(-90deg, var(--clr-primary), var(--clr-secondary));
+    --clr-accent: #f7f7ff;
+    --clr-gradient: linear-gradient(
+      -90deg,
+      var(--clr-primary),
+      var(--clr-secondary)
+    );
     --ff-title: bungee, sans-serif;
     --ff-body: canada-type-gibson, sans-serif;
     --fw-body: 300;
@@ -38,51 +42,62 @@
   }
 </style>
 <style>
-  .flex-parent {
+  figure { background: whitesmoke;  }
+  figure img { display: block; margin: 0 auto; clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
+
+  .main {
     display: flex;
+    --s: 100px;
+    --m: 4px;
+    --f: calc(var(--s) * 1.732 + 4 * var(--m) - 1px); 
   }
-
-  .flex-item,
-  .grid > * {
-    padding: .5em;
-    background: #efefef;
-    border: 3px solid #333;
-    flex-shrink: 1;
+  .container { font-size: 0; }
+  .container::before {
+    content: "";
+    width: calc(var(--s) / 2 + var(--m));
+    float: left;
+    height: 100%;
+    shape-outside: repeating-linear-gradient(#0000 0 calc(var(--f) - 3px),#000 0 var(--f));
   }
-
-  .grid {
-    display: grid;
-    gap: 1em;
+  .container div {
+    background: blue;
+    width: var(--s);
+    margin: var(--m);
+    height: calc(var(--s) * 1.1547);
+    display: inline-block;
+    font-size: initial;
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+    margin-bottom: calc(var(--m) - var(--s) * 0.2886)
   }
-  @media (min-width: 35em) {
-    .grid {
-      grid-auto-flow: column;
-    grid-auto-column: 1fr;
-    }
+  .container div:nth-child(odd) {
+    background:green;
   }
-
 </style>
 
-<div class="flex-parent">
-  <div class="flex-item">
-    flex-item Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, asperiores?
-  </div>
-  <div class="flex-item">
-    flex-item Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, modi?
-  </div>
-  <div class="flex-item">
-    flex-item Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum, architecto.
-  </div>
-</div>
+<figure><img src="https://picsum.photos/200/?grayscale" alt="" /></figure>
 
-<div class="grid">
-  <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facere pariatur corporis esse in
-    cumque voluptas assumenda error dicta ea necessitatibus, ratione ex, quidem, fugiat mollitia non aspernatur ipsa
-    dolorum!</div>
-  <div>Eveniet debitis possimus, velit voluptate aliquam itaque cum ex animi fuga, nisi, alias ut
-    tenetur! Quis dolores qui saepe sit nesciunt harum quo dignissimos quia, consequatur ullam, laboriosam sapiente
-    asperiores!</div>
-  <div>Alias quos laborum cum excepturi? Repudiandae placeat debitis odit aliquam aliquid suscipit,
-    enim laboriosam dolorum quasi eaque earum, at fugiat fuga similique minima dolorem. Fugiat illo omnis ad inventore
-    tempore.</div>
+
+<div class="main">
+  <div class="container">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 </div>
