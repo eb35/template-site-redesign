@@ -1,0 +1,88 @@
+<style>
+  /* =========================
+   GENERAL STYLES 
+   NOT RELATED TO THE TUTORIAL
+============================ */
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --clr-primary: #ee6352;
+    --clr-secondary: #d16e8d;
+    --clr-accent: #F7F7FF;
+    --clr-gradient: linear-gradient(-90deg, var(--clr-primary), var(--clr-secondary));
+    --ff-title: bungee, sans-serif;
+    --ff-body: canada-type-gibson, sans-serif;
+    --fw-body: 300;
+    --fw-bold: 800;
+    --fw-title: 400;
+    --fw-number: 800;
+  }
+
+  body {
+    min-height: 100vh;
+    font-family: var(--ff-body);
+    font-weight: var(--fw-body);
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    width: min(95%, 45rem);
+    margin: 0 auto;
+  }
+</style>
+<style>
+  .flex-parent {
+    display: flex;
+  }
+
+  .flex-item,
+  .grid > * {
+    padding: .5em;
+    background: #efefef;
+    border: 3px solid #333;
+    flex-shrink: 1;
+  }
+
+  .grid {
+    display: grid;
+    gap: 1em;
+  }
+  @media (min-width: 35em) {
+    .grid {
+      grid-auto-flow: column;
+    grid-auto-column: 1fr;
+    }
+  }
+
+</style>
+
+<div class="flex-parent">
+  <div class="flex-item">
+    flex-item Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati, asperiores?
+  </div>
+  <div class="flex-item">
+    flex-item Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, modi?
+  </div>
+  <div class="flex-item">
+    flex-item Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum, architecto.
+  </div>
+</div>
+
+<div class="grid">
+  <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo facere pariatur corporis esse in
+    cumque voluptas assumenda error dicta ea necessitatibus, ratione ex, quidem, fugiat mollitia non aspernatur ipsa
+    dolorum!</div>
+  <div>Eveniet debitis possimus, velit voluptate aliquam itaque cum ex animi fuga, nisi, alias ut
+    tenetur! Quis dolores qui saepe sit nesciunt harum quo dignissimos quia, consequatur ullam, laboriosam sapiente
+    asperiores!</div>
+  <div>Alias quos laborum cum excepturi? Repudiandae placeat debitis odit aliquam aliquid suscipit,
+    enim laboriosam dolorum quasi eaque earum, at fugiat fuga similique minima dolorem. Fugiat illo omnis ad inventore
+    tempore.</div>
+</div>
